@@ -13,11 +13,14 @@ document.getElementById('shuffleButton').addEventListener('click', () => {
                     const tileDiv = document.createElement('div');
                     tileDiv.classList.add('tile', tile);
 
-                    const numberSpan = document.createElement('span');
-                    numberSpan.classList.add('tile-number');
-                    numberSpan.textContent = number || '-';
+                    const numSpan = document.createElement('span');
+                    numSpan.classList.add('tile-number');
+                    if (number === 6 || number === 8) {
+                        numSpan.classList.add('red');
+                    }
+                    numSpan.textContent = number || '-';
 
-                    tileDiv.appendChild(numberSpan);
+                    tileDiv.appendChild(numSpan);
                     rowDiv.appendChild(tileDiv);
                 });
                 boardContainer.appendChild(rowDiv);

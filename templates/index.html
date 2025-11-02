@@ -25,7 +25,9 @@
             <div class="board-row">
                 {% for tile in row %}
                     <div class="tile {{ tile.tile }}">
-                        <span class="tile-number">{{ tile.number or "-" }}</span>
+                        <span class="tile-number {% if tile.number in [6, 8] %}red{% endif %}">
+                            {{ tile.number or '-' }}
+                        </span>
                     </div>
                 {% endfor %}
             </div>
