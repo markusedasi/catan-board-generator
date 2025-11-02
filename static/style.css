@@ -1,7 +1,55 @@
+body {
+    font-family: 'Bungee', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+#expansionSelect {
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    appearance: none;
+    border-style: hidden;
+}
+
+button {
+    margin-left: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    border-style: hidden;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #004494;
+    transform: scale(0.98);
+}
+
 #board {
     width: 800px;
     height: 600px;
-    margin: 2rem auto 2rem;
+    margin: 3rem auto 0;
     padding: 3rem;
     background-color: lightblue;
     clip-path: polygon(
@@ -21,12 +69,12 @@
 }
 
 .tile {
+    font-size: 2rem;
     width: 125px;
     height: 135px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
     clip-path: polygon(
         50% 0%,
         100% 25%,
