@@ -2,21 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Catan Board Generator</title>
+    <title>Catan Board</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <section>
+    <h1>Catan Board</h1>
+
+    <section id="board">
         {% for row in board %}
-            <div>
+            <div class="board-row">
                 {% for tile in row %}
-                    {{ tile.tile }}({{ tile.number or "-" }})
+                    <div class="tile {{ tile.tile }}">
+                        {{ tile.number or "-" }}
+                    </div>
                 {% endfor %}
             </div>
         {% endfor %}
     </section>
+
     <section>
-        <!-- BUTTONS -->
+        <button id="shuffleButton">Shuffle</button>
     </section>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
