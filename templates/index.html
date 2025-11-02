@@ -25,7 +25,7 @@
             <div class="board-row">
                 {% for tile in row %}
                     <div class="tile {{ tile.tile }}">
-                        {{ tile.number or "-" }}
+                        <span class="tile-number">{{ tile.number or "-" }}</span>
                     </div>
                 {% endfor %}
             </div>
