@@ -51,7 +51,7 @@ button:active {
     height: 600px;
     margin: 3rem auto 0;
     padding: 3rem;
-    background-color: lightblue;
+    background-color: #cb9c55;
     clip-path: polygon(
         25% 0%,
         75% 0%,
@@ -89,9 +89,57 @@ button:active {
     color: white;
 }
 
-.wood { background-color: brown; color: white; }
-.hay { background-color: yellow; color: black; }
-.sheep { background-color: gray; color: black; }
-.brick { background-color: red; color: white; }
-.rock { background-color: black; color: white; }
-.desert { background-color: beige; color: black; }
+.tile-number {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #cb9c55;
+    border: 1px solid black;
+    color: black;
+    font-family: 'Bungee', sans-serif;
+}
+
+
+.wood {
+    background-image: url('/static/tiles/wood.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+.hay {
+    background-image: url('/static/tiles/hay.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+.sheep {
+    background-image: url('/static/tiles/sheep.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+.brick {
+    background-image: url('/static/tiles/red_brick.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+.rock {
+    background-image: url('/static/tiles/stone.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+
+}
+.desert {
+    background-image: url('/static/tiles/desert.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+}

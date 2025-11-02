@@ -12,10 +12,14 @@ document.getElementById('shuffleButton').addEventListener('click', () => {
                 row.forEach(({tile, number}) => {
                     const tileDiv = document.createElement('div');
                     tileDiv.classList.add('tile', tile);
-                    tileDiv.textContent = number || '-';
+
+                    const numberSpan = document.createElement('span');
+                    numberSpan.classList.add('tile-number');
+                    numberSpan.textContent = number || '-';
+
+                    tileDiv.appendChild(numberSpan);
                     rowDiv.appendChild(tileDiv);
                 });
-
                 boardContainer.appendChild(rowDiv);
             });
         });
