@@ -15,6 +15,7 @@ document.getElementById('shuffleButton').addEventListener('click', () => {
                     tileDiv.textContent = number || '-';
                     rowDiv.appendChild(tileDiv);
                 });
+
                 boardContainer.appendChild(rowDiv);
             });
         });

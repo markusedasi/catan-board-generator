@@ -1,6 +1,24 @@
+.tile {
+    width: 60px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.wood { background-color: brown; color: white; }
+.hay { background-color: yellow; color: black; }
+.sheep { background-color: gray; color: black; }
+.brick { background-color: red; color: white; }
+.rock { background-color: black; color: white; }
+.desert { background-color: beige; color: black; }
+
 .board-row {
     display: flex;
     justify-content: center;
-    margin: 5px 0;
-    gap: 5px;
+    margin: 5rem;
+    gap: 7rem;
 }
