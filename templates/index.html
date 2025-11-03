@@ -23,18 +23,20 @@
         <button id="shuffleButton">Shuffle</button>
     </section>
 
-    <section id="board">
-        {% for row in board %}
-            <div class="board-row">
-                {% for tile in row %}
-                    <div class="tile {{ tile.tile }}">
-                        <span class="tile-number {% if tile.number in [6, 8] %}red{% endif %}">
-                            {{ tile.number or '-' }}
-                        </span>
-                    </div>
-                {% endfor %}
-            </div>
-        {% endfor %}
+    <section id="board-outer">
+        <section id="board">
+            {% for row in board %}
+                <div class="board-row">
+                    {% for tile in row %}
+                        <div class="tile {{ tile.tile }}">
+                            <span class="tile-number {% if tile.number in [6, 8] %}red{% endif %}">
+                                {{ tile.number or '-' }}
+                            </span>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </section>
     </section>
 
     <script src="{{ url_for('static', filename='main.js') }}"></script>
